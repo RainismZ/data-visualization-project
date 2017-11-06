@@ -1,0 +1,143 @@
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    tab-size: 2;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    margin: 0.5em;
+    -webkit-tap-highlight-color: transparent;
+    min-width: 1020px;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Linux Libertine", "Georgia", "Times", serif;
+    font-size: 2em;
+}
+
+h2 {
+    margin: 0.2em 0 0.2em 0;
+    font-weight: 600;
+}
+
+.usage {
+    font-size: 0.6em;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+}
+
+.wrapper:after {
+    padding-top: 44%;
+    display: block;
+    content: '';
+}
+
+.main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+/*    background-color: #EEE;*/
+}
+
+.introduction {
+    height: 100%;
+    word-wrap: break-word;
+    font-size: 0.8em;
+    margin: 0 1.5em;
+    line-height: 200%;
+}
+
+.img-content {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-content::after {
+    display: block;
+    content: "";
+    padding-bottom: 60%;
+    overflow: hidden;
+}
+
+.introduction img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    margin: auto;
+}
+
+.infoTitle {
+    font-weight: 600;
+}
+
+.projects, .projects svg {
+    position: absolute;
+}
+
+.projects svg {
+    width: 15px;
+    height: 15px;
+    padding-right: 100px;
+    font: 10px sans-serif;
+}
+
+.projects circle {
+    fill: brown;
+    fill-opacity: .5;
+    stroke: #fff;
+    stroke-width: .5px;
+}
+
+.projects circle:hover {
+    fill-opacity: 1;
+}
+
+.details {
+    margin: 1em 0;
+}
+
+.custom-restricted {
+    height: 340px;
+    width: 100%;
+    border: 1px solid gray;
+}
+
+#scroll p {
+    word-wrap: break-word;
+    font-weight: 600;
+}
+
+.pure-menu-item, .pure-menu-heading {
+    font-size: 0.8em;
+}
+
+.figuretitle {
+    text-align: center;
+}
+
+.neighborhood {
+    font-weight: 600;
+}
+
+.axis .domain {
+    display: none;
+}
+
+.ppBar, .psmBar {
+    padding: 1em;
+}

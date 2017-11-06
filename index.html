@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/queue.v1.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    <title>HCIDLA Affordable Housing Projects</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <script src="//maps.google.com/maps/api/js?sensor=true"></script>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <h1>HCIDLA Affordable Housing Projects</h2>
+    <div class="wrapper">
+        <div class="pure-g main">
+            <div class="pure-u-1-2" id="map">            
+            </div>
+            <div class="pure-u-1-2" id="info">
+                <div class="introduction">
+                    <h2>Information <span class="usage">  (Click circle on map to update)</span></h2>
+                    <span class="infoTitle">Name: </span><span id="projectName">Two World Apartments (Site 5)</span><br>
+                    <span class="infoTitle">Address: </span><span id="projectAddress">2625 S Harvard Blvd CA 90018</span><br>
+                    <span class="infoTitle">Construction Type: </span><span id="constructionType">Rehab</span><br>
+                    <span class="infoTitle">Housing Type: </span><span id="housingType">Seniors</span><br>
+                    <span class="infoTitle">Photo: </span><br>
+                    <div class="img-content"><img id="projectPhoto" src="http://hcidapp.lacity.org/mpphotos/070172/Photo/Website%20Site5/Two%20Worlds%202625%20S.%20Harvard%20-%20070172.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="pure-g details">
+            <div class="pure-u-6-24" id="scroll">
+                <p>Select a neighborhood to view details:</p>
+                <div class="pure-menu pure-menu-scrollable custom-restricted">
+                    <a href="#scroll" class="pure-menu-link pure-menu-heading">-- Neighborhood --</a>
+                    <ul class="pure-menu-list">
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Adams-Normandie</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Alsace</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Angelino Heights</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Arlington Heights</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Atwater Village</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Boyle Heights</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Broadway-Manchester</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Canoga Park</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Central-Alameda</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Chatsworth</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Chinatown</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Del Rey</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Downtown</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">E. Hollywood</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">East Hollywood</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Echo Park</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">El Sereno</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Elysian Valley</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Exposition Park</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Florence-Firestone</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Glassell Park</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Gramercy Park</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Green Meadows</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Harbor City</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Harbor Gateway</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Harvard Heights</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Harvard Park</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Highland Park</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Historic South-Central</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Hollywood</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Hyde Park</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Jefferson Park</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Koreatown</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Lake View Terrace</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Lincoln Heights</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Los Feliz</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Mid-City</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Mid-Wilshire</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">North Hills</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">North Hollywood</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Pacoima</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Panorama City</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Pico-Union</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Rancho Park</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Reseda</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">San Pedro</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Sherman Oaks</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Silver Lake</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">South Park</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Sun Valley</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Sunland</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Sylmar</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Tujunga</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">University Park</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Valley Glen</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Van Nuys</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Venice</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Vermont Knolls</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Vermont Square</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Vermont Vista</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Vermont-Slauson</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Watts</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">West Adams</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Westlake</a></li>
+                        <li class="pure-menu-item"><a href="#scroll" class="pure-menu-link nbh">Wilmington</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pure-u-9-24">
+                <p class="figuretitle">Figure 1: Funding per capita of <span class="neighborhood"></span>.</p>
+                <div id="ppBar"></div>
+            </div>
+            <div class="pure-u-9-24">
+                <p class="figuretitle">Figure 2: Funding per square mile of <span class="neighborhood"></span>.</p>
+                <div id="psmBar"></div>                
+            </div>
+        </div>
+    </div>
+
+    <script src="./dist/bundle.js"></script>
+  </body>
