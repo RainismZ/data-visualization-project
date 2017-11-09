@@ -15,4 +15,6 @@ The dataset contains 341 rows and 27 columns, while each row is an affordable ho
 
 ### Descriptions of Visualization and Interactions
 
-As shown in figure 1, there are two parts of the project —— information box (above) and funding details (below) —— each contains an interaction.
+As shown in figure 1, there are two parts of the project —— information box (above) and funding details (below) —— each contains an major interaction. 
+
+For information box, I used Google Map API with D3 layers to implement the map window. Each red circle on map presents a row of the dataset, which is an affordable housing site or location. And the information panel on right gives the name, address, construction type, housing type and an image of the location. By clicking a circle, the information on right panel will update to the selected site/location. *(Please notice that in Google Chrome, red circles may not load correctly the first time your visit the page, but they will appear if you reload the page. Edge and Safari don't have this issue. I'm currently working to solve it.)*
