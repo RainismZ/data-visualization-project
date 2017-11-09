@@ -26,4 +26,7 @@ In funding details panel below, there's a scrollable list of neighborhoods, each
 ![fundingdetails](https://user-images.githubusercontent.com/22625369/32584328-b7e8f67c-c4c5-11e7-96b8-4e65aaaed57d.jpg)
 <p align="center">Figure 2: Sketch of funding details chart from proposal.</p>
 
-As mentioned in proposal, one major question we were trying to answer is "where did the fund go"?
+As mentioned in proposal, one major question we were trying to answer is **"where did the fund go?"** As I'm currently adding the ethnicity and income tooltip from sketch prototype to bar charts, still we can find some clue.
+
+<img width="697" alt="chinatown" src="https://user-images.githubusercontent.com/22625369/32584686-b6d071c8-c4c7-11e7-9616-7eba61c95a8f.PNG">
+<p align="center">Figure 3: Funding details of L.A. China Town.</p>
