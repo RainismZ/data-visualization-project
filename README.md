@@ -10,6 +10,7 @@ The dataset contains 341 rows and 27 columns, while each row is an affordable ho
 <br>[[Downloadable CSV]](https://data.lacity.org/api/views/u4mj-cwbz/rows.csv?accessType=DOWNLOAD), [[Dataset Summary]](https://bl.ocks.org/RainismZ/28059e87d7e8d312261a10d7e9fd6177)
 
 <img width="949" alt="thumbnail" src="https://user-images.githubusercontent.com/22625369/32581590-7b0fe4f2-c4b8-11e7-981d-6d089edbcfeb.PNG">
+
 <center>Figure 1: Screenshot of the project page.</center>
 
 ### Descriptions of Visualization and Interactions
