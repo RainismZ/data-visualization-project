@@ -11,7 +11,7 @@ The dataset contains 341 rows and 27 columns, while each row is an affordable ho
 
 <img width="949" alt="thumbnail" src="https://user-images.githubusercontent.com/22625369/32581590-7b0fe4f2-c4b8-11e7-981d-6d089edbcfeb.PNG">
 
-<span align="center">Figure 1: Screenshot of the project page.</span>
+<p align="center">Figure 1: Screenshot of the project page.</p>
 
 ### Descriptions of Visualization and Interactions
 
