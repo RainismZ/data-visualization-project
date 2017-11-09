@@ -20,3 +20,10 @@ As shown in figure 1, there are two parts of the project —— information box 
 For information box, I used Google Map API with D3 layers to implement the map window. Each red circle on map presents a row of the dataset, which is an affordable housing site or location. And the information panel on right gives the name, address, construction type, housing type and an image of the location. By clicking a circle, the information on right panel will update to the selected site/location. *(Please notice that in Google Chrome, red circles may not load correctly the first time your visit the page, but they will appear if you reload the page. Edge and Safari don't have this issue. I'm currently working to solve it.)*
 
 In funding details panel below, there's a scrollable list of neighborhoods, each of which has at least one HCIDLA project. The two grouped bar chart on the right presents four types of fundings (HCIDLA Funded, Leverage, Tax Exempt Conduit Bond, TDC) the neighborhood received compare with the L.A. average (calculated from the total 341 projects around L.A.), while the first bar chart shows the per capita numbers, and second bar chart shows per square mile numbers. By clicking a neighborhood in the scrollable list, the two grouped bar charts will update.
+
+## Answered Questions and Discussions
+
+![fundingdetails](https://user-images.githubusercontent.com/22625369/32584328-b7e8f67c-c4c5-11e7-96b8-4e65aaaed57d.jpg)
+<p align="center">Figure 2: Sketch of funding details chart from proposal.</p>
+
+As mentioned in proposal, one major question we were trying to answer is "where did the fund go"?
