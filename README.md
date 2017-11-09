@@ -30,5 +30,5 @@ As mentioned in proposal, one major question we were trying to answer is **"wher
 
 <p align="center">
   <img width="697" alt="chinatown" src="https://user-images.githubusercontent.com/22625369/32584686-b6d071c8-c4c7-11e7-9616-7eba61c95a8f.PNG">
-  <p>Figure 3: Funding details of L.A. China Town.</p>
 </p>
+<p align="center">Figure 3: Funding details of L.A. China Town.</p>
